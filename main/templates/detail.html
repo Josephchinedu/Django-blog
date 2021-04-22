@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+<title>{% block title %}Detail{% endblock title %}</title>
+
+{% block content %}
+
+<div class="container">
+    <div class="row" style="padding: 20px; margin-top: 50px;">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{  object.title }}</h5>
+                    <p class="card-text">{{  object.body}}</p>
+                </div>
+                
+            </div>
+            <br /><br />
+            <a class="btn btn-primary" href="{% url 'post_edit' post.pk %}">Edit Blog Post</a>
+                <a class="btn btn-danger" href="{% url 'post_delete' post.pk %}">Delete Blog Post</a>
+
+            <br /><br /><br />
+
+            
+        </div>
+
+
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h4 class="card-title">Comments</h4>
+                    <br />
+                    {% for comment in post.comments.all %}
+                    <h6 class="card-title"><span class="text-danger">Author:</span> {{ comment.author }}</h6>
+                    <small style="font-family: monospace;">{{ comment.date }}</small><br />
+                    <span style="font-family: monospace; font-size: 15px;">Comment: </span><br />
+                    <p class="card-text" style="font-family: monospace; font-size: 15px;">{{ comment }}</p>
+                    <hr >
+                    {% endfor %}
+                    <br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
