@@ -18,7 +18,7 @@ comment on blog post
 ## Deployed on heroku
 View:  [https://damp-caverns-248.herokuapp.com/](Django blog app).
 
-[![Cover](images.png)]
+(images.png)
 
 
 
