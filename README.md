@@ -5,7 +5,7 @@ simple django blog project for beginners
 ## User features
 * create account
 * login
-* reset
+* reset password
 * change password
 
 ## Blog features
