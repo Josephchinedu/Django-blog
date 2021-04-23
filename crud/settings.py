@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-)lwm#5et=o_lm7_t_9!9(klc2q^$kt)ucvfle^u2_0&9e6nj_$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://damp-caverns-95248.herokuapp.com/']
+ALLOWED_HOSTS = ['djangcrudapp1.herokuapp.com']
 
 
 
